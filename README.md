@@ -1,5 +1,6 @@
-<h1>Sistema que encripta y desencripta mensajes de texto</h1>
+<h1> # Encriptador<h1>
 
+<h3>Sistema que encripta y desencripta mensajes de texto.</h3>
 
 - Tecnologias utilizadas: html, css y javascript.
   
