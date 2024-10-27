@@ -1,7 +1,7 @@
 const textArea = document.querySelector(".text-area");
 const message = document.querySelector(".message");
 
-const aviso = document.querySelector(".info");
+const aviso = document.querySelector(".texto-aviso");
 
 function validarTexto(texto) {
     // Expresión regular que valida solo letras minúsculas sin acentos ni caracteres especiales
@@ -11,7 +11,7 @@ function validarTexto(texto) {
         return true; // Texto válido
     } else {
        // alert("El texto solo puede contener letras minúsculas sin acentos ni caracteres especiales.Intenta de nuevo!");
-        aviso.textContent = "No debe tener acentos ni caracteres especiales. Intenta de nuevo!";
+        aviso.textContent = "No debe contener acentos, números ni caracteres especiales. Intenta de nuevo!";
         
         return false; // Texto inválido
     }

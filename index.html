@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="img/x-icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" type="img/x-icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -14,6 +15,46 @@
 </head>
 
 <body onload="limpiarCampos()">
+
+    <header>
+        <h1><img class="logo-alura" src="/assets/img/logo.png" alt="Logo de Alura" aria-label="Página principal del juego"/></h1> 
+    </header>
+    
+    <main>
+        <section class="encriptador">
+            <textarea class="text-area" cols="30" rows="11" id="txt-area"
+                placeholder= "Ingresa el texto que deseas encriptar o desencriptar aquí"></textarea>
+            <div class="encriptador-aviso">
+                <img src="/assets/img/aviso.svg" alt="Ícono aviso" aria-label="Mensaje aclaratorio" class="icono-aviso" />
+                <p class="texto-aviso">Solo letras minúsculas y sin acentos. </p>
+            </div>
+            <div class="encriptador-contenedor">
+                <button type="submit" class="btn-encriptar" onclick="btnEncriptar()" aria-label="Encriptar mensaje">Encriptar</button>
+                <button type="submit" class="btn-desencriptar" onclick="btnDesencriptar()" aria-label="Desencriptar mensaje">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="tarjeta">
+            <textarea class="message" cols="12" rows="10" id="mensaje"></textarea>
+            <button class="copiar" id="btn_copiar" type="button" name="button" onclick="copiar()" aria-label="Copiar mensaje">Copiar</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="texto-footer">
+            <p class="copyright">&copy; Copyright 2024 -</p>
+            <p> Encriptador de Texto -</p>
+            <p> CaroZTSDWeb</p>
+            <img src="/assets/img/github.svg" alt="Logo github" aria-label="Usuario de Github"  class="github"/>
+        
+        </div>
+    </footer>
+
+    <script src="/encriptador.js"></script>
+</body>
+
+</html>
+
     <!--
     <div class="container">
         <header>
@@ -38,7 +79,7 @@
 
          <section>
             <div class="ingrese-texto2">
-            <!--  <img src="img/detective.png" id="img_detective" alt="Es un niño con una lupa"/>
+              <img src="img/detective.png" id="img_detective" alt="Es un niño con una lupa"/>
             <h1 id="tittle_detective">Ningún mensaje fue encontrado</h1> -->
 
       <!--        <textarea class="message" cols="12" rows="11" id="mensaje">Ingresa el texto que deseas encriptar o desencriptar//NO USA EL TITULO.</textarea>
@@ -53,8 +94,8 @@
         </footer>
 
     </div>
--->
+
     <script src="/encriptador.js"></script>
     </body>
 
-</html>
+</html>-->

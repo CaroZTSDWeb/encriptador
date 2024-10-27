@@ -1,4 +1,322 @@
-:root{
+:root {
+    --color-primario-bg: #F3F5FC;
+    --color-secundario: #0A3871;
+    --color-terceario:  #495057; 
+    --color-bg-message: white;
+    --color-btn-encriptar:white;
+    --color-bg-desencriptar:#D8DFE8;
+    --color-footer: #D8DFE8;
+    --color-bg-footer: #4873a8;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--color-primario-bg); 
+    overflow: auto;
+    font-size: 16px;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    position: relative;
+}
+
+header.logo-alura{
+      width: 100%;
+      padding: 0;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.encriptador {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    gap: 1rem;   
+}
+
+.text-area {
+   width: 90%;
+   padding: 1rem; 
+   border-radius: 2rem;
+   font-weight: 400;
+   font-size: 1.4rem;
+   border:none;
+   color: var(--color-secundario); 
+   text-transform: lowercase;
+   margin-bottom: 10px;
+} 
+
+::placeholder { color: var(--color-secundario); }
+  .text-area:focus {
+        outline: none;
+    }
+
+.encriptador-aviso {
+    width: 90%;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    gap: 8px;
+  }
+
+.texto-aviso {
+    width: 100%;
+    font-style: normal; 
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 150%;  
+    color: var(--color-terceario);
+}
+
+.encriptador-contenedor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-encriptar,
+.btn-desencriptar,
+.copiar {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--color-secundario);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;  
+}
+
+.btn-encriptar {
+    width: 90%;
+    color: var(--color-btn-encriptar);
+    background-color: var(--color-secundario);
+}
+
+.btn-desencriptar {
+    width: 90%;
+    color: var(--color-secundario);
+    background-color: var(--color-bg-desencriptar);
+}
+
+.copiar{
+    color: var(--color-secundario);
+    margin-top: auto;
+}
+
+.btn-encriptar:hover,
+.btn-desencriptar:hover,
+.copiar:hover{
+    transform: scale(0.97);
+}
+
+.tarjeta{
+    width: 80%;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: var(--color-bg-message);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 10px 24px 32px -8px var(--color-terceario);
+}
+
+.message {
+    width: 100%;
+    height: 12vh;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--color-secundario);
+    background-color: var(--color-bg-message);
+    border: none;
+    outline: none;
+    margin-top: 0.5rem;
+}
+
+.texto-footer{
+    background-color: var(--color-bg-footer);
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    padding: 1.5rem 0; 
+    gap: 2px;
+}
+
+.texto-footer{
+    font-size: 1rem; 
+    font-weight: 400;
+}
+
+img.github{
+    max-width: 20px;
+}
+
+@media (min-width: 768px) {
+    header {
+        margin-top: 40px;
+        margin-bottom: 15px;
+        margin-left: 40px;
+    }
+
+    main {
+        display: flex;
+        gap: 4rem;
+    }
+
+    .text-area,
+    .message {
+        font-size: 2rem;
+        line-height: 150%;
+    }
+
+    .text-area,
+    .tarjeta {
+        padding: 3rem;
+    }
+
+    .encriptador-contenedor{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .btn-encriptar,
+    .btn-desencriptar,
+    .copiar {
+        font-size: 1.2rem;
+    }  
+}
+
+@media (min-width: 1025px) {
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .encriptador{
+        width: 60%;
+    }
+
+    .tarjeta{
+        width: 30%;
+        height: 90vh;
+        padding: 1rem;
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    .message {
+        width: 90%;
+        height: 65vh;
+        background-image: url("/assets/img/detective.png");
+        background-repeat: no-repeat;
+        position: absolute; 
+        resize: none;
+        padding-right: 0;
+        margin-right: 0;
+    }
+}
+    
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*:root{
     --color-primario-bg: #F3F5FC;
     --color-secundario: #0A3871;
     --color-terceario:  #495057; 
@@ -121,4 +439,4 @@ main{
     padding: 6px 0px;
     background-color: var(--color-bg-footer);
 }
-
+/*
